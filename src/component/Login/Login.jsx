@@ -2,6 +2,7 @@ import { useContext, useState } from 'react';
 import { FaGoogle } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
+import Swal from 'sweetalert2';
 
 const Login = () => {
 
@@ -20,14 +21,19 @@ const Login = () => {
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(email, password);
 
         setError('');
         signIn(email, password)
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
-                setSuccess('User has Create successFully');
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'User Login in SuccessFully',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
                 form.reset();
                 navigate(from, { replace: true })
             })

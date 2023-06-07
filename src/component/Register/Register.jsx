@@ -2,6 +2,7 @@ import { useContext, useState } from 'react';
 import { FaGoogle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
+import Swal from 'sweetalert2';
 
 const Register = () => {
 
@@ -45,7 +46,11 @@ const Register = () => {
             .then(result => {
                 const loggedUser = result.user
                 console.log(loggedUser);
-                setSuccess('User has Create successFully');
+                Swal.fire({
+                    icon: 'success',
+                    title: 'User Created SuccessFull',
+                    text: 'Welcome To Food Enthusiast!'
+                  })
                 form.reset();
             })
             .catch(error => {
