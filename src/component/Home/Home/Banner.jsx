@@ -1,8 +1,8 @@
-import img4 from '../../../../public/images/slider-1.jpg'
+import bannerImg from '../../../../public/images/banner (2).jpg'
 
 const Banner = () => {
     return (
-        <div className='w-full h-[80vh] bg-slate-300 rounded-xl p-8 my-4'>
+        <div className='w-full h-[80vh] bg-slate-300 p-8 my-4'>
         <div className="banner-container md:flex items-center justify-around p-2">
             <div className="banner-title p-4 md:w-1/2 text-center">
                 
@@ -14,7 +14,7 @@ const Banner = () => {
                 </div>
             </div>
             <div className="banner-img md:w-1/2">
-                <img className='w-full h-[60vh] rounded-xl' src={img4} alt="" />
+                <img className='w-full h-[70vh] rounded-xl' src={bannerImg} alt="" />
             </div>
         </div>
     </div>
