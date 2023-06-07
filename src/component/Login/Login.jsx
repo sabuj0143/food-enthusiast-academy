@@ -9,7 +9,7 @@ const Login = () => {
                 </div>
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-gray-400">
                     <div className="card-body">
-                        <h1 className="text-2xl font-bold text-orange-800 text-center">Places Login !</h1>
+                        <h1 className="text-2xl font-bold text-gray-950 text-center">Places Login !</h1>
                         <form>
                             <div className="form-control">
                                 <label className="label">
