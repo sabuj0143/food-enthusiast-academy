@@ -25,15 +25,21 @@ const Header = () => {
                             <li><Link to="/">Home</Link></li>
                             <li><Link>Instructors</Link></li>
                             <li><Link to="classes">Classes</Link></li>
+                            {
+                                user ? <li><Link to="/dashboard">Dashboard</Link></li> : ''
+                            }
                         </ul>
                     </div>
-                    <a className="normal-case text-2xl">Enthusiast-Academy</a>
+                    <a className="normal-case text-2xl text-[#CD6001]">Enthusiast-Academy</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
                         <li><Link to="/">Home</Link></li>
                         <li><Link>Instructors</Link></li>
                         <li><Link to="/classes">Classes</Link></li>
+                        {
+                            user ? <li><Link to="/dashboard">Dashboard</Link></li> : ''
+                        }
                     </ul>
                 </div>
                 <div className="navbar-end">
