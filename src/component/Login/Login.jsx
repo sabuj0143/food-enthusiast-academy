@@ -1,8 +1,53 @@
+import { useContext, useState } from 'react';
 import { FaGoogle } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../Provider/AuthProvider';
 
 const Login = () => {
-    
+
+    const [error, setError] = useState('');
+    const [success, setSuccess] = useState('');
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
+
+    const { signIn, signInWithGoogle } = useContext(AuthContext);
+
+    const handleUserLogin = event => {
+        event.preventDefault();
+        setSuccess('')
+
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log(email, password);
+
+        setError('');
+        signIn(email, password)
+            .then(result => {
+                const loggedUser = result.user;
+                console.log(loggedUser);
+                setSuccess('User has Create successFully');
+                form.reset();
+                navigate(from, { replace: true })
+            })
+            .catch(error => {
+                setError(error.massage)
+            })
+    }
+    const handleSignInGoogle = () => {
+        signInWithGoogle()
+            .then(result => {
+                const loggedUser = result.user;
+                console.log(loggedUser);
+                navigate(from, { replace: true })
+            })
+            .catch(error => {
+                console.log(error);
+            })
+    }
+
+
     return (
         <div className="hero min-h-screen bg-gray-200">
             <div className="hero-content flex-col lg:flex-row">
@@ -11,7 +56,7 @@ const Login = () => {
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-gray-400">
                     <div className="card-body">
                         <h1 className="text-2xl font-bold text-gray-950 text-center">Places Login !</h1>
-                        <form>
+                        <form onSubmit={handleUserLogin}>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
@@ -24,10 +69,10 @@ const Login = () => {
                                 </label>
                                 <input type="password" name='password' placeholder="********" className="input input-bordered" required />
                             </div>
-                            {/* <div className='mt-2'>
+                            <div className='mt-2'>
                                 <p className='text-red-800'>{error}</p>
                                 <p className='text-green-900'>{success}</p>
-                            </div> */}
+                            </div>
                             <div className="form-control w-full mx-auto mt-6">
                                 <input className="btn btn-primary" type="submit" value="Login" />
                             </div>
@@ -36,7 +81,7 @@ const Login = () => {
                             to="/register"> Register</Link></p>
                         <div className="divider">OR</div>
 
-                        <button className='btn btn-outline btn-primary flex items-center space-x-2'> <FaGoogle /> <span> Google</span> </button>
+                        <button onClick={handleSignInGoogle} className='btn btn-outline btn-primary flex items-center space-x-2'> <FaGoogle /> <span> Google</span> </button>
                     </div>
                 </div>
             </div>
