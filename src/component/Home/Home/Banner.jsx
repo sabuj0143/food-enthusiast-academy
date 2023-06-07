@@ -2,7 +2,7 @@ import bannerImg from '../../../../public/images/Banner-3 (3).jpg'
 
 const Banner = () => {
     return (
-        <div className='w-full h-[80vh] bg-slate-300 p-8 mb-8 my-4'>
+        <div className='w-full h-[100vh] bg-slate-300 p-8 mb-8 my-4'>
         <div className="banner-container md:flex items-center justify-around p-2">
             <div className="banner-title p-4 md:w-1/2 text-center">
                 
@@ -13,8 +13,8 @@ const Banner = () => {
                     <button className="btn btn-primary font-semibold mt-6 w-[50%]"><span className='space-x-4'>Contact us</span> <span className='ml-2'></span></button>
                 </div>
             </div>
-            <div className="banner-img md:w-1/2">
-                <img className='w-full h-[70vh] rounded-xl' src={bannerImg} alt="" />
+            <div className="banner-img  md:w-1/2">
+                <img className='w-full md:h-[70vh] rounded-xl' src={bannerImg} alt="" />
             </div>
         </div>
     </div>

@@ -2,6 +2,7 @@ import { FaGoogle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const Login = () => {
+    
     return (
         <div className="hero min-h-screen bg-gray-200">
             <div className="hero-content flex-col lg:flex-row">

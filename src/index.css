@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 .oswald{
     font-family: 'Oswald', sans-serif;
 }

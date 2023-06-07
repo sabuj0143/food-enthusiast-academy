@@ -13,14 +13,15 @@ const firebaseConfig = {
   storageBucket: import.meta.env.VITE_STORAGEBUCKET,
   messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
   appId: import.meta.env.VITE_APPID
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+export default app;
+
 //   apiKey: "AIzaSyBtmLCn1WJfS0ixI8WHIEOllya1vSEvhyA",
 //   authDomain: "enthusiast-academy.firebaseapp.com",
 //   projectId: "enthusiast-academy",
 //   storageBucket: "enthusiast-academy.appspot.com",
 //   messagingSenderId: "724232124431",
 //   appId: "1:724232124431:web:99ca232669ffb267420b7a"
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-export default app;

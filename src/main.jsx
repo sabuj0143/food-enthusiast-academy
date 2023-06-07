@@ -11,6 +11,8 @@ import Home from './component/Home/Home/Home';
 import Login from './component/Login/Login';
 import Register from './component/Register/Register';
 import ErrorPage from './ErrorPage/ErrorPage';
+import Classes from './component/Classes/Classes';
+import AuthProvider from './Provider/AuthProvider';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>
+      },
+      {
+        path: '/classes',
+        element: <Classes></Classes>
       },
       {
         path: '/login',
@@ -38,7 +44,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <div className='max-w-screen-xl	mx-auto'>
-      <RouterProvider router={router} />
+      <AuthProvider>
+        <RouterProvider router={router} />
+      </AuthProvider>
     </div>
   </React.StrictMode>,
 )
