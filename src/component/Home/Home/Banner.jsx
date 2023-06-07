@@ -1,8 +1,8 @@
-import bannerImg from '../../../../public/images/banner (2).jpg'
+import bannerImg from '../../../../public/images/Banner-3 (3).jpg'
 
 const Banner = () => {
     return (
-        <div className='w-full h-[80vh] bg-slate-300 p-8 my-4'>
+        <div className='w-full h-[80vh] bg-slate-300 p-8 mb-8 my-4'>
         <div className="banner-container md:flex items-center justify-around p-2">
             <div className="banner-title p-4 md:w-1/2 text-center">
                 

@@ -8,7 +8,7 @@ import './CarouselSlider.css'
 import img1 from '../../../../public/images/slider-1 (2).jpg'
 import img2 from '../../../../public/images/slider-2 (2).jpg'
 import img3 from '../../../../public/images/slider-3 (2).jpg'
-import img4 from '../../../../public/images/slider-3 (2).jpg'
+import img4 from '../../../../public/images/slider-5.jpg'
 
 import { EffectFade, Navigation, Pagination } from "swiper";
 
@@ -26,13 +26,13 @@ const CarouselSlider = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <img src={img1} />
+          <img src={img3} />
         </SwiperSlide>
         <SwiperSlide>
           <img src={img2} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img3} />
+          <img src={img1} />
         </SwiperSlide>
         <SwiperSlide>
           <img src={img4} />
