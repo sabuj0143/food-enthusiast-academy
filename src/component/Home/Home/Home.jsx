@@ -3,7 +3,7 @@ import Banner from "./Banner";
 
 const Home = () => {
     return (
-        <div className="mt-12">
+        <div className="mt-4">
             <Banner></Banner>
             <Outlet></Outlet>
         </div>
