@@ -1,0 +1,129 @@
+[
+    {
+        "name": "Plow-Bao",
+        "instructorName": "Rafi hossian",
+        "image": "https://i.ibb.co/Ln4QZkK/plow-bao.webp",
+        "category": "popular",
+        "price": 14.7,
+        "availableSeats": 125,
+        "students": 40
+    },
+    {
+        "name": "Eateries-Flourish",
+        "instructorName": "Escalope de Veau",
+        "image": "https://i.ibb.co/f0P0MPx/eateries-flourish.jpg",
+        "category": "burger",
+        "price": 14,
+        "availableSeats": 90,
+        "students": 30
+    },
+    {
+        "name": "pizza-dough",
+        "instructorName": "Veau",
+        "image": "https://i.ibb.co/Vmd6JR9/pizza-dough.jpg",
+        "category": "pizza",
+        "price": 40,
+        "availableSeats": 180,
+        "students": 100
+    },
+    {
+        "name": "Plant-Based",
+        "instructorName": "Escalope de Veau",
+        "image": "https://i.ibb.co/8zyhw09/plant-based.jpg",
+        "category": "popular",
+        "price": 25,
+        "availableSeats": 80,
+        "students": 18
+    },
+    {
+        "name": "Ahn-Joo",
+        "instructorName": "Haddock",
+        "image": "https://i.ibb.co/JcdJcBM/ahn-joo.jpg",
+        "category": "burger",
+        "price": 15,
+        "availableSeats": 70,
+        "students": 40
+    },
+    {
+        "name": "Plow-Burger",
+        "instructorName": "Roast Duck Breast",
+        "image": "https://i.ibb.co/8zyhw09/plant-based.jpg",
+        "category": "popular",
+        "price": 20,
+        "availableSeats": 50,
+        "students": 14
+    },
+    {
+        "name": "Vegan-Food",
+        "instructorName": "Breton Fish Stew",
+        "image": "https://i.ibb.co/WFP4JkY/vegan-food.jpg",
+        "category": "popular",
+        "price": 17,
+        "availableSeats": 100,
+        "students": 20
+    },
+    {
+        "name": "Frenh-Fries",
+        "instructorName": "Tuna Niçoise",
+        "image": "https://i.ibb.co/1Gs1Rmg/frenh-fries.jpg",
+        "category": "burger",
+        "price": 15,
+        "availableSeats": 70,
+        "students": 10
+    },
+    {
+        "name": "Lansing-Michigan",
+        "instructorName": "Escalope de Veau",
+        "image": "https://i.ibb.co/ZG5gGbm/lansing-michigan.jpg",
+        "category": "popular",
+        "price": 19,
+        "availableSeats": 50,
+        "students": 20
+    },
+    {
+        "name": "Plow-Burger",
+        "instructorName": "Tuna Niçoise",
+        "image": "https://i.ibb.co/WP0Mz8C/plow-burger.png",
+        "category": "popular",
+        "price": 29,
+        "availableSeats": 120,
+        "students": 60
+    },
+    {
+        "name": "High-Hopes",
+        "instructorName": "Escalope de Veau",
+        "image": "https://i.ibb.co/9qp5MKY/high-hopes.jpg",
+        "category": "burger",
+        "price": 22,
+        "availableSeats": 50,
+        "students": 10
+    },
+    {
+        "name": "Pizza-Dough",
+        "instructorName": "De Veau",
+        "image": "https://i.ibb.co/gDksFyJ/waffle-tastries.jpg",
+        "category": "pizza",
+        "price": 32,
+        "availableSeats": 150,
+        "students": 55
+    },
+    {
+        "name": "Waffle-Tastries",
+        "instructorName": "Escalope de Veau",
+        "image": "https://i.ibb.co/gDksFyJ/waffle-tastries.jpg",
+        "category": "burger",
+        "price": 12,
+        "availableSeats": 50,
+        "students": 35
+    },
+    {
+        "name": "Cheese-Pizza",
+        "instructorName": "Escalope deo",
+        "image": "https://i.ibb.co/QMh1yxq/cheese-pizza.jpg",
+        "category": "pizza",
+        "price": 24,
+        "availableSeats": 40,
+        "students": 23
+    }
+   
+]
