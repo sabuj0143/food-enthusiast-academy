@@ -57,8 +57,6 @@ const Register = () => {
                 setError(error.massage)
             })
 
-
-
     }
 
     return (
