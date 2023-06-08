@@ -1,6 +1,6 @@
-import { Outlet } from "react-router-dom";
 import Banner from "./Banner";
 import CarouselSlider from "./CarouselSlider";
+import ExtraSection from "./ExtraSection";
 import PopularMenu from "./PopularMenu";
 
 const Home = () => {
@@ -9,7 +9,7 @@ const Home = () => {
             <Banner></Banner>
             <CarouselSlider></CarouselSlider>
             <PopularMenu></PopularMenu>
-            <Outlet></Outlet>
+            <ExtraSection></ExtraSection>
         </div>
     );
 };

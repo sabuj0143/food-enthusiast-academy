@@ -1,6 +1,6 @@
 import { useContext, useState } from 'react';
 import { FaGoogle } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 import Swal from 'sweetalert2';
 
@@ -8,8 +8,9 @@ const Register = () => {
 
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
+    const navigate = useNavigate();
 
-    const { createUser } = useContext(AuthContext);
+    const { createUser, updateUserProfile } = useContext(AuthContext);
 
     const handleRegister = event => {
         event.preventDefault();
@@ -22,7 +23,7 @@ const Register = () => {
         const password = form.password.value;
         const confirm = form.confirm.value;
 
-        console.log(name, photo, email, password, confirm);
+        // console.log(name, photo, email, password, confirm);
         setError('');
 
         if (!/(?=.*[0-6])/.test(password)) {
@@ -46,12 +47,38 @@ const Register = () => {
             .then(result => {
                 const loggedUser = result.user
                 console.log(loggedUser);
-                Swal.fire({
-                    icon: 'success',
-                    title: 'User Created SuccessFull',
-                    text: 'Welcome To Food Enthusiast!'
-                  })
-                form.reset();
+
+                updateUserProfile(name, photo)
+                    .then(() => {
+
+                        const saveUser = { name: name, email: email };
+                        console.log(saveUser);
+                        
+
+                        fetch('http://localhost:5000/users', {
+                            method: "POST",
+                            headers: {
+                                "content-type": "application/json",
+                            },
+                            body: JSON.stringify(saveUser)
+                        })
+                            .then(res => res.json())
+                            .then(data => {
+                                if (data.insertedId) {
+                                    form.reset();
+                                    Swal.fire({
+                                        position: 'top-end',
+                                        icon: 'success',
+                                        title: 'User created successfully',
+                                        showConfirmButton: false,
+                                        timer: 1500
+                                    })
+                                    navigate('/')
+                                }
+                            })
+
+                    })
+
             })
             .catch(error => {
                 setError(error.massage)
