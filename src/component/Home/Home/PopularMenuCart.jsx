@@ -1,17 +1,28 @@
 
 const PopularMenuCart = ({ item }) => {
 
-    const {name, price, recipe, image} = item;
+    const { name, availableSeats, students, price, image } = item;
 
     return (
-        <div className="flex space-x-2">
-            <img style={{borderRadius: "0 200px 200px 200px"}} className="w-[100px]" src={image} alt="" />
-            <div>
-                <h3 className="uppercase">{name}-------</h3>
-                <p>{recipe}</p>
+        <>
+            <div data-aos="flip-left"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000"
+                className="card w-96 h-[50vh] bg-gray-200 shadow-2xl">
+                <figure><img className="w-full h-[200px]" src={image} alt="Shoes" /></figure>
+                <div className="card-body">
+                    <h2 className="card-title">
+                        {name}
+                        <div className="badge bg-yellow-400">Popular</div>
+                    </h2>
+                    <h2 className="card-title">
+                        Price: ${price}
+                    </h2>
+                    <p></p>
+
+                </div>
             </div>
-            <p className="text-[#E7BF62] lilita mb-2">${price}</p>
-        </div>
+        </>
     );
 };
 
