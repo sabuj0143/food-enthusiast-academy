@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+.full-website{
+    background-color: white;
+}
 
 .oswald{
     font-family: 'Oswald', sans-serif;

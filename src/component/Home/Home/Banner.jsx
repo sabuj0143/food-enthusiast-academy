@@ -9,7 +9,7 @@ const Banner = () => {
                     data-aos-easing="ease-in-sine" 
                     className="banner-title p-4 md:w-1/2 text-center">
 
-                    <h4 className='text-center font-semibold text-4xl'><span className='text-[#CD6001]'>We</span>lcome To <span className='text-blue-800'>Food Enthusiast-Academy</span></h4>
+                    <h4 className='text-center lilita font-semibold text-4xl'><span className='text-[#CD6001]'>We</span>lcome To <span className='text-blue-800'>Food Enthusiast-Academy</span></h4>
 
                     <p className='mt-4 text-xl font-normal'>Different types of food can provide  different <br /> nutrients  that the body needs,<br />  such as carbohydrates,<br />proteins, fats, vitamins, and minerals.</p>
                     <div>

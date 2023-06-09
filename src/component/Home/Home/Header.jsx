@@ -30,7 +30,7 @@ const Header = () => {
                             }
                         </ul>
                     </div>
-                    <a className="normal-case text-2xl text-[#CD6001]">Enthusiast-Academy</a>
+                    <a className="normal-case text-2xl lilita text-[#CD6001]">Enthusiast-Academy</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
