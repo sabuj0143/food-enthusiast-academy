@@ -15,6 +15,7 @@ const PopularMenu = () => {
     }, [])
 
     const popular = menu.filter(item => item.category === 'popular');
+    const topSixPopular = popular.slice(0, 6);
 
     return (
         <div className="my-8 mt-12">
@@ -26,7 +27,7 @@ const PopularMenu = () => {
 
             <div className="gap-6 p-4 grid md:grid-cols-3">
                 {
-                    popular.map(item => <PopularMenuCart
+                    topSixPopular.map(item => <PopularMenuCart
                         key={item._id}
                         item={item}
                     ></PopularMenuCart>)

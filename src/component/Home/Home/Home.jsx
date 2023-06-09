@@ -2,6 +2,7 @@ import Banner from "./Banner";
 import CarouselSlider from "./CarouselSlider";
 import ExtraSection from "./ExtraSection";
 import PopularMenu from "./PopularMenu";
+import TopStudents from "./TopStudents";
 
 const Home = () => {
     return (
@@ -10,6 +11,7 @@ const Home = () => {
             <CarouselSlider></CarouselSlider>
             <PopularMenu></PopularMenu>
             <ExtraSection></ExtraSection>
+            <TopStudents></TopStudents>
         </div>
     );
 };

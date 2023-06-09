@@ -1,8 +1,8 @@
-import { useContext, useState } from 'react';
 import { FaGoogle } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { AuthContext } from '../../Provider/AuthProvider';
 import Swal from 'sweetalert2';
+import useAuth from '../../Hooks/useAuth';
+import { useState } from 'react';
 
 const Login = () => {
 
@@ -12,7 +12,7 @@ const Login = () => {
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
 
-    const { signIn, signInWithGoogle } = useContext(AuthContext);
+    const { signIn, signInWithGoogle } = useAuth();
 
     const handleUserLogin = event => {
         event.preventDefault();

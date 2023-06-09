@@ -1,8 +1,8 @@
-import { useContext, useState } from 'react';
 import { FaGoogle } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
-import { AuthContext } from '../../Provider/AuthProvider';
 import Swal from 'sweetalert2';
+import useAuth from '../../Hooks/useAuth';
+import { useState } from 'react';
 
 const Register = () => {
 
@@ -10,7 +10,7 @@ const Register = () => {
     const [success, setSuccess] = useState('');
     const navigate = useNavigate();
 
-    const { createUser, updateUserProfile } = useContext(AuthContext);
+    const { createUser, updateUserProfile } = useAuth();
 
     const handleRegister = event => {
         event.preventDefault();
