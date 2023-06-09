@@ -1,17 +1,10 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import ClassesCart from "./ClassesCart";
+import useClass from "../../Hooks/useClass";
 
 const Classes = () => {
-
-    const [menu, setMenu] = useState([]);
-
-    useEffect(() => {
-        fetch('http://localhost:5000/classes')
-            .then(res => res.json())
-            .then(data => {
-                setMenu(data);
-            })
-    }, [])
+    
+    const [classes] = useClass();
 
     return (
         <div>
@@ -20,7 +13,7 @@ const Classes = () => {
             </div>
             <div className="gap-6 p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                 {
-                    menu.map(item => <ClassesCart
+                    classes.map(item => <ClassesCart
                         key={item._id}
                         item={item}
                     ></ClassesCart>)
