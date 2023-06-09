@@ -14,6 +14,9 @@ import ErrorPage from './ErrorPage/ErrorPage';
 import Classes from './component/Classes/Classes';
 import AuthProvider from './Provider/AuthProvider';
 import Dashboard from './component/Dashboard/Dashboard';
+import AddClass from './component/Dashboard/AddClass/AddClass';
+
+
 
 const router = createBrowserRouter([
   {
@@ -41,7 +44,13 @@ const router = createBrowserRouter([
   },
   {
     path: '/dashboard',
-    element: <Dashboard></Dashboard>
+    element: <Dashboard></Dashboard>,
+    children: [
+      {
+        path: 'addClass',
+        element: <AddClass></AddClass>
+      }
+    ]
   }
 ]);
 

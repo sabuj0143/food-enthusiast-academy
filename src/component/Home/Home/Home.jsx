@@ -1,6 +1,7 @@
 import Banner from "./Banner";
 import CarouselSlider from "./CarouselSlider";
 import Contact from "./Contact";
+import Featured from "./Featured";
 import PopularMenu from "./PopularMenu";
 
 const Home = () => {
@@ -8,8 +9,9 @@ const Home = () => {
         <div className="mt-4">
             <Banner></Banner>
             <CarouselSlider></CarouselSlider>
-            <Contact></Contact>
             <PopularMenu></PopularMenu>
+            <Contact></Contact>
+            <Featured></Featured>
         </div>
     );
 };

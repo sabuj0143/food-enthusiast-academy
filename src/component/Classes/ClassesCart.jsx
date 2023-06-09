@@ -20,7 +20,7 @@ const ClassesCart = ({ item }) => {
                         Available Seats :</span>    {availableSeats}</p>
                     <p><span className="font-semibold">Price :</span> ${price}</p>
                     <div className="my-2">
-                        <button className="btn btn-outline btn-primary">select</button>
+                        <button className="btn btn-outline btn-warning border-0 border-b-4">Select</button>
                     </div>
 
                 </div>

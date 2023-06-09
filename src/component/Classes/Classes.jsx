@@ -16,7 +16,7 @@ const Classes = () => {
     return (
         <div>
             <div className="my-4 mt-8 text-center">
-                <h1 className="text-4xl font-semibold text-[#CD6001]">All Classes</h1>
+                <h1 className="text-4xl font-semibold text-[#FBBD23]">All Classes</h1>
             </div>
             <div className="gap-6 p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                 {
