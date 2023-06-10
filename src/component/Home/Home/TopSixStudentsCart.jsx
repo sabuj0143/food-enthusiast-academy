@@ -1,10 +1,11 @@
 
-const PopularMenuCart = ({ item }) => {
 
-    const { name, price, instructorName, image } = item;
+const TopSixStudentsCart = ({item}) => {
+
+    const { name, availableSeats, students, price, image } = item;
 
     return (
-        <>
+         <>
             <div data-aos="flip-left"
                 data-aos-easing="ease-out-cubic"
                 data-aos-duration="2000"
@@ -13,14 +14,13 @@ const PopularMenuCart = ({ item }) => {
                 <div className="card-body">
                     <h2 className="card-title">
                         {name}
-                        <div className="badge bg-yellow-400">Popular</div>
-                    </h2>
-                    <h2 >
-                        Instructor Name: {instructorName}
+                        <div className="badge bg-yellow-400">Top Student</div>
                     </h2>
                     <h2>
                         Price: ${price}
                     </h2>
+                    <p>Available Seats :  {availableSeats}</p>
+                    <p>Students :  {students}</p>
 
                 </div>
             </div>
@@ -28,4 +28,4 @@ const PopularMenuCart = ({ item }) => {
     );
 };
 
-export default PopularMenuCart;
+export default TopSixStudentsCart;
