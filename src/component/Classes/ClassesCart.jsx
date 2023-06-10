@@ -3,6 +3,8 @@ import useAuth from "../../Hooks/useAuth";
 import useSelected from "../../Hooks/useSelected";
 import Swal from "sweetalert2";
 import { useState } from "react";
+import useAdmin from "../../Hooks/useAdmin";
+import useInstructor from "../../Hooks/useInstructor";
 
 
 const ClassesCart = ({ item }) => {
@@ -13,19 +15,25 @@ const ClassesCart = ({ item }) => {
 
 
     const { user } = useAuth();
+    const [isAdmin] = useAdmin();
+    const [isInstructor] = useInstructor();
     const [, refetch] = useSelected();
-
     const navigate = useNavigate();
     const location = useLocation();
+
 
     const handleSelectCart = (item) => {
         console.log(item);
 
-        if (seats === student) {
+        if (user && (isAdmin || isInstructor)) {
             return;
         }
+        // if (seats === student) {
+        //     return;
+        // }
         if (user && user.email) {
             const selectItem = { menuId: _id, name, image, price, email: user.email };
+
 
             fetch('http://localhost:5000/selects', {
                 method: 'POST',
@@ -83,7 +91,9 @@ const ClassesCart = ({ item }) => {
                         Available Seats :</span>    {student}</p>
                     <p><span className="font-semibold">Price :</span> ${price}</p>
                     <div className="my-2">
-                        <button onClick={() => handleSelectCart(item)} className="btn btn-outline btn-warning border-0 border-b-4">Select</button>
+                        <button onClick={() => handleSelectCart(item)}
+                            disabled={user && (isAdmin || isInstructor)}
+                            className="btn btn-outline btn-warning border-0 border-b-4">Select</button>
                     </div>
 
                 </div>
