@@ -32,7 +32,7 @@ const ClassesCart = ({ item }) => {
                     if (data.insertedId) {
                         Swal.fire({
                             icon: 'success',
-                            text: 'Add to Cart successfully',
+                            text: 'Add To Selected Successfully',
                         })
                     }
                 })

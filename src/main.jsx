@@ -23,6 +23,7 @@ import {
 import Instructors from './component/Home/Instructors/Instructors';
 import AllUsers from './component/Dashboard/AllUsers/AllUsers';
 import MySelectedClass from './component/Dashboard/Student/MySelectedClass';
+import AdminRoute from './PrivateRoute/AdminRoute';
 const queryClient = new QueryClient()
 
 
@@ -65,7 +66,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'allUsers',
-        element: <AllUsers></AllUsers>
+        element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
       },
       {
         path: 'mySelectedClass',
