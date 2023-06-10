@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
-import { FaTrash, FaUserShield } from "react-icons/fa";
+import { FaUserShield } from "react-icons/fa";
 import Swal from "sweetalert2";
 
 const AllUsers = () => {
@@ -32,8 +32,24 @@ const AllUsers = () => {
             })
     }
 
-    const handleDelete = user => {
-        console.log(user);
+    const handleMakeInstructor = user => {
+        fetch(`http://localhost:5000/users/instructor/${user._id}`, {
+            method: 'PATCH'
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.modifiedCount) {
+                    refetch();
+                    Swal.fire({
+                        position: 'top-end',
+                        icon: 'success',
+                        title: `${user.name} is an instructor now`,
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                }
+            })
     }
 
     return (
@@ -55,7 +71,7 @@ const AllUsers = () => {
                             <th>Name</th>
                             <th>Email</th>
                             <th>Role</th>
-                            <th>Action</th>
+                            <th>Role</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -76,10 +92,15 @@ const AllUsers = () => {
                                     }
                                 </td>
                                 <td>
-                                    <button
-                                        onClick={() => handleDelete(user)} className="btn btn-ghost bg-red-500 btn-md text-white">
-                                        <FaTrash></FaTrash>
-                                    </button>
+                                    {
+                                        user.role === 'instructor' ? 'instructor' :
+                                            <button
+                                                onClick={() => handleMakeInstructor(user)}
+                                                className="btn btn-ghost bg-orange-400 btn-md text-white">
+                                               <FaUserShield></FaUserShield>
+                                            </button>
+
+                                    }
                                 </td>
                             </tr>)
                         }

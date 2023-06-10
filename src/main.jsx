@@ -24,6 +24,7 @@ import Instructors from './component/Home/Instructors/Instructors';
 import AllUsers from './component/Dashboard/AllUsers/AllUsers';
 import MySelectedClass from './component/Dashboard/Student/MySelectedClass';
 import AdminRoute from './PrivateRoute/AdminRoute';
+import InstructorRoute from './PrivateRoute/InstructorRoute';
 const queryClient = new QueryClient()
 
 
@@ -62,7 +63,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: 'addClass',
-        element: <AddClass></AddClass>
+        element: <InstructorRoute><AddClass></AddClass></InstructorRoute>
       },
       {
         path: 'allUsers',
