@@ -1,8 +1,8 @@
-import { FaGoogle } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import useAuth from '../../Hooks/useAuth';
 import { useState } from 'react';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Login = () => {
 
@@ -12,7 +12,7 @@ const Login = () => {
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
 
-    const { signIn, signInWithGoogle } = useAuth();
+    const { signIn } = useAuth();
 
     const handleUserLogin = event => {
         event.preventDefault();
@@ -33,7 +33,7 @@ const Login = () => {
                     title: 'User Login in SuccessFully',
                     showConfirmButton: false,
                     timer: 1500
-                  })
+                })
                 form.reset();
                 navigate(from, { replace: true })
             })
@@ -41,18 +41,6 @@ const Login = () => {
                 setError(error.massage)
             })
     }
-    const handleSignInGoogle = () => {
-        signInWithGoogle()
-            .then(result => {
-                const loggedUser = result.user;
-                console.log(loggedUser);
-                navigate(from, { replace: true })
-            })
-            .catch(error => {
-                console.log(error);
-            })
-    }
-
 
     return (
         <div className="hero min-h-screen bg-gray-200">
@@ -85,9 +73,10 @@ const Login = () => {
                         </form>
                         <p className='text-center my-4'>New Enthusiast Academy ?<Link className='text-red-800 font-semibold'
                             to="/register"> Register</Link></p>
-                        <div className="divider">OR</div>
 
-                        <button onClick={handleSignInGoogle} className='btn btn-outline btn-primary flex items-center space-x-2'> <FaGoogle /> <span> Google</span> </button>
+                        <div className='text-center items-center'>
+                            <SocialLogin></SocialLogin>
+                        </div>
                     </div>
                 </div>
             </div>

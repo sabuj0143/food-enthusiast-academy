@@ -1,8 +1,8 @@
-import { FaGoogle } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import useAuth from '../../Hooks/useAuth';
 import { useState } from 'react';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Register = () => {
 
@@ -53,7 +53,7 @@ const Register = () => {
 
                         const saveUser = { name: name, email: email };
                         console.log(saveUser);
-                        
+
 
                         fetch('http://localhost:5000/users', {
                             method: "POST",
@@ -134,9 +134,10 @@ const Register = () => {
                             </div>
                         </form>
                         <p className='text-center my-4'>Already have an account ? <Link className='text-red-800 font-semibold' to="/login"> Login</Link></p>
-                        <div className="divider">OR</div>
 
-                        <button className='btn btn-outline btn-primary flex items-center space-x-2'> <FaGoogle /> <span> Google</span> </button>
+                        <div className='text-center items-center'>
+                            <SocialLogin></SocialLogin>
+                        </div>
 
                     </div>
                 </div>
