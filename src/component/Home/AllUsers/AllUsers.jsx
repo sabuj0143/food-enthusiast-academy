@@ -12,7 +12,7 @@ const AllUsers = () => {
         return res.data;
     })
     const handleMakeAdmin = user => {
-        fetch(`https://bisto-boss-server-sabuj0143.vercel.app/users/admin/${user._id}`, {
+        fetch(`http://localhost:5000/users/admin/${user._id}`, {
             method: 'PATCH'
         })
             .then(res => res.json())

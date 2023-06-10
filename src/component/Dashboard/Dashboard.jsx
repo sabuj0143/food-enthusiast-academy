@@ -4,7 +4,9 @@ import { NavLink, Outlet } from "react-router-dom";
 
 const Dashboard = () => {
 
-    const isInstructor = true;
+    const isInstructor = false;
+    const isAdmin = true;
+
 
     return (
         <div className="drawer lg:drawer-open">
@@ -17,12 +19,20 @@ const Dashboard = () => {
                 <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
 
             </div>
-            <div className="drawer-side bg-[#acaa33]">
+            <div className="drawer-side bg-[#ae41da]">
                 <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
                 <ul className="menu p-4 w-80 h-full text-base-content">
 
                     {
-                        isInstructor ? <>
+                        isAdmin ? <>
+                            <li><NavLink to="/dashboard/addClass">
+                                <FaUtensils></FaUtensils> MANAGE CLASS
+                            </NavLink></li>
+                            <li><NavLink to="/dashboard/allUsers">
+                                <FaUsers></FaUsers> MANEGE USERS
+                            </NavLink></li>
+
+                        </> : isInstructor ? <>
                             <li><NavLink to="/dashboard/addClass">
                                 <FaUtensils></FaUtensils> ADD AN CLASS
                             </NavLink></li>
@@ -35,22 +45,16 @@ const Dashboard = () => {
                             <li><NavLink to="/dashboard/allUsers">
                                 <FaUsers></FaUsers> FEEDBACK
                             </NavLink></li>
-
                         </> : <>
-                            <li><NavLink to="/dashboard/userhome">
-                                <FaHome></FaHome> User Home
-                            </NavLink></li>
-                            <li><NavLink to="/dashboard/reservations">
-                                <FaCalendarAlt></FaCalendarAlt> Reservations
-                            </NavLink></li>
-                            <li><NavLink to="/dashboard/history">
-                                <FaWallet></FaWallet> Payment History
-                            </NavLink></li>
                             <li>
-                                <NavLink to="/dashboard/myCart">
+                                <NavLink to="/dashboard/mySelectedClass">
                                     <FaShoppingCart /> My Classes
                                 </NavLink>
                             </li>
+                            <li><NavLink to="/dashboard/reservations">
+                                <FaCalendarAlt></FaCalendarAlt> MY ENROLLED CLASS
+                            </NavLink></li>
+
                         </>
                     }
 
@@ -60,10 +64,6 @@ const Dashboard = () => {
                     <li><NavLink to="/">
                         <FaHome></FaHome>  Home
                     </NavLink></li>
-                    {/* <li><NavLink to="/menu">
-                        Our Classes
-                    </NavLink></li> */}
-
 
 
                 </ul>
@@ -74,3 +74,4 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
+
