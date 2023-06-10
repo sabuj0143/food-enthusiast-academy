@@ -26,6 +26,11 @@ import MySelectedClass from './component/Dashboard/Student/MySelectedClass';
 import AdminRoute from './PrivateRoute/AdminRoute';
 import InstructorRoute from './PrivateRoute/InstructorRoute';
 import Payment from './component/Dashboard/Payment/Payment';
+import ManageClass from './component/Dashboard/ManageClass/ManageClass';
+import InstructorMyClass from './component/Dashboard/Instructor/InstructorMyClass';
+import TotalEnrolled from './component/Dashboard/Instructor/TotalEnrolled';
+import Feedback from './component/Dashboard/Instructor/Feedback';
+import MyEnrolledClass from './component/Dashboard/Student/MyEnrolledClass';
 const queryClient = new QueryClient()
 
 
@@ -67,8 +72,20 @@ const router = createBrowserRouter([
         element: <InstructorRoute><AddClass></AddClass></InstructorRoute>
       },
       {
-        path: 'payment',
-        element: <Payment></Payment>
+        path: 'manageClass',
+        element: <ManageClass></ManageClass>
+      },
+      {
+        path: 'instructorMyClass',
+        element: <InstructorMyClass></InstructorMyClass>
+      },
+      {
+        path: 'totalEnrolled',
+        element: <TotalEnrolled></TotalEnrolled>
+      },
+      {
+        path: 'feedback',
+        element: <Feedback></Feedback>
       },
       {
         path: 'allUsers',
@@ -77,6 +94,14 @@ const router = createBrowserRouter([
       {
         path: 'mySelectedClass',
         element: <MySelectedClass></MySelectedClass>
+      },
+      {
+        path: 'payment',
+        element: <Payment></Payment>
+      },
+      {
+        path: 'myEnrolledClass',
+        element: <MyEnrolledClass></MyEnrolledClass>
       },
     ]
   }

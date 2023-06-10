@@ -42,7 +42,7 @@ const Header = () => {
                         }
                     </ul>
                 </div>
-                <div className="navbar-end text-center items-center">
+                <div className="navbar-end flex text-center items-center">
                     <div className="md:mr-2">
                         <label className="swap swap-rotate">
 

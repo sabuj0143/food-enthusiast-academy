@@ -27,7 +27,7 @@ const Dashboard = () => {
 
                     {
                         isAdmin ? <>
-                            <li><NavLink to="/dashboard/addClass">
+                            <li><NavLink to="/dashboard/manageClass">
                                 <FaUtensils></FaUtensils> MANAGE CLASS
                             </NavLink></li>
                             <li><NavLink to="/dashboard/allUsers">
@@ -38,13 +38,13 @@ const Dashboard = () => {
                             <li><NavLink to="/dashboard/addClass">
                                 <FaUtensils></FaUtensils> ADD AN CLASS
                             </NavLink></li>
-                            <li><NavLink to="/dashboard/manageItem">
+                            <li><NavLink to="/dashboard/instructorMyClass">
                                 <FaWallet></FaWallet> MY CLASS
                             </NavLink></li>
-                            <li><NavLink to="/dashboard/history">
+                            <li><NavLink to="/dashboard/totalEnrolled">
                                 <FaBook></FaBook> TOTAL ENROLLED STUDENTS
                             </NavLink></li>
-                            <li><NavLink to="/dashboard/allUsers">
+                            <li><NavLink to="/dashboard/feedback">
                                 <FaUsers></FaUsers> FEEDBACK
                             </NavLink></li>
                         </> : <>
@@ -53,7 +53,7 @@ const Dashboard = () => {
                                     <FaShoppingCart /> My Classes
                                 </NavLink>
                             </li>
-                            <li><NavLink to="/dashboard/reservations">
+                            <li><NavLink to="/dashboard/myEnrolledClass">
                                 <FaCalendarAlt></FaCalendarAlt> MY ENROLLED CLASS
                             </NavLink></li>
 
