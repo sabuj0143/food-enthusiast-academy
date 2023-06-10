@@ -7,7 +7,7 @@ const useSelected = () => {
     const { user, loading } = useAuth();
     const [axiosSecure] = useAxiosSecure();
 
-    const { refetch, data: select = [] } = useQuery({
+    const { refetch, data: selects = [] } = useQuery({
         queryKey: ['selects', user?.email],
         enabled: !loading,
         queryFn: async () => {
@@ -17,7 +17,7 @@ const useSelected = () => {
         },
     })
 
-    return [select, refetch]
+    return [selects, refetch]
 };
 
 export default useSelected;

@@ -11,7 +11,7 @@ const Dashboard = () => {
 
 
     return (
-        <div className="drawer lg:drawer-open">
+        <div className="drawer lg:drawer-open bg-gray-300">
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content flex flex-col items-center justify-center">
 
@@ -21,7 +21,7 @@ const Dashboard = () => {
                 <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
 
             </div>
-            <div className="drawer-side bg-[#ae41da]">
+            <div className="drawer-side bg-[#dac341] p-4">
                 <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
                 <ul className="menu p-4 w-80 h-full text-base-content">
 

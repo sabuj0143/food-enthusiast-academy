@@ -13,7 +13,7 @@ const Instructors = () => {
                         <tr>
                             <th>#</th>
                             <th>IMAGE</th>
-                            <th>NAME</th>
+                            <th>Instructor NAME</th>
                             <th>EMAIL</th>
                         </tr>
                     </thead>
@@ -34,7 +34,7 @@ const Instructors = () => {
                                     </div>
                                 </td>
                                 <td className="lilita">
-                                    {item.name}
+                                    {item.instructorName}
                                 </td>
                                 <td>
                                     ${item.email}

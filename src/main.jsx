@@ -25,6 +25,7 @@ import AllUsers from './component/Dashboard/AllUsers/AllUsers';
 import MySelectedClass from './component/Dashboard/Student/MySelectedClass';
 import AdminRoute from './PrivateRoute/AdminRoute';
 import InstructorRoute from './PrivateRoute/InstructorRoute';
+import Payment from './component/Dashboard/Payment/Payment';
 const queryClient = new QueryClient()
 
 
@@ -64,6 +65,10 @@ const router = createBrowserRouter([
       {
         path: 'addClass',
         element: <InstructorRoute><AddClass></AddClass></InstructorRoute>
+      },
+      {
+        path: 'payment',
+        element: <Payment></Payment>
       },
       {
         path: 'allUsers',
