@@ -28,11 +28,10 @@ const ClassesCart = ({ item }) => {
         if (user && (isAdmin || isInstructor)) {
             return;
         }
-        // if (seats === student) {
-        //     return;
-        // }
+
         if (user && user.email) {
             const selectItem = { menuId: _id, name, image, price, email: user.email };
+            console.log(selectItem);
 
 
             fetch('http://localhost:5000/selects', {
@@ -88,7 +87,7 @@ const ClassesCart = ({ item }) => {
                     <p><span className="font-semibold">
                         Available Seats :</span>    {seats}</p>
                     <p><span className="font-semibold">
-                        Available Seats :</span>    {student}</p>
+                        Students :</span>    {student}</p>
                     <p><span className="font-semibold">Price :</span> ${price}</p>
                     <div className="my-2">
                         <button onClick={() => handleSelectCart(item)}

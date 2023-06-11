@@ -1,49 +1,19 @@
 import useClass from "../../../Hooks/useClass";
+import SingleClass from "./SingleClass";
 
 const Instructors = () => {
 
     const [classes] = useClass();
 
     return (
-        <div className="w-[70%] mx-auto my-8">
-            <div className="overflow-x-auto w-full neue">
-                <table className="table w-full">
-                    {/* head */}
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>IMAGE</th>
-                            <th>Instructor NAME</th>
-                            <th>EMAIL</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-
-                        {
-                            classes.map((item, index) => <tr
-                                key={item._id}
-                            >
-                                <td>
-                                    {index + 1}
-                                </td>
-                                <td>
-                                    <div className="avatar">
-                                        <div className="mask mask-squircle w-12 h-12">
-                                            <img src={item.image} alt="Avatar Tailwind CSS Component" />
-                                        </div>
-                                    </div>
-                                </td>
-                                <td className="lilita">
-                                    {item.instructorName}
-                                </td>
-                                <td>
-                                    ${item.email}
-                                </td>
-                            </tr>)
-                        }
-
-                    </tbody>
-                </table>
+        <div className="my-6">
+            <div className="grid md:grid-cols-3 gap-4">
+                {
+                    classes.map(singleClass => <SingleClass
+                        key={singleClass._id}
+                        singleClass={singleClass}
+                    ></SingleClass>)
+                }
             </div>
         </div>
     );

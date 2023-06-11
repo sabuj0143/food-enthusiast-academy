@@ -45,14 +45,12 @@ const Register = () => {
 
         createUser(email, password)
             .then(result => {
-                const loggedUser = result.user
-                console.log(loggedUser);
+                const loggedUser = result.user;
 
                 updateUserProfile(name, photo)
                     .then(() => {
 
                         const saveUser = { name, email };
-                        console.log(saveUser);
 
 
                         fetch('http://localhost:5000/users', {

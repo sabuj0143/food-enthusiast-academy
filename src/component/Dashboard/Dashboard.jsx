@@ -1,4 +1,4 @@
-import { FaBook, FaHome, FaShoppingCart, FaRegCalendarCheck, FaUsers, FaUtensils, FaWallet } from "react-icons/fa";
+import { FaBook, FaHome, FaShoppingCart, FaBriefcase, FaRegCalendarCheck, FaUsers, FaUtensils, FaWallet } from "react-icons/fa";
 import { NavLink, Outlet } from "react-router-dom";
 import useAdmin from "../../Hooks/useAdmin";
 import useInstructor from "../../Hooks/useInstructor";
@@ -28,7 +28,7 @@ const Dashboard = () => {
                     {
                         isAdmin ? <>
                             <li><NavLink to="/dashboard/manageClass">
-                                <FaShoppingCart></FaShoppingCart> MANAGE CLASS
+                                <FaBriefcase></FaBriefcase> MANAGE CLASS
                             </NavLink></li>
                             <li><NavLink to="/dashboard/allUsers">
                                 <FaUsers></FaUsers> MANEGE USERS

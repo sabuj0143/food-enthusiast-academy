@@ -37,9 +37,11 @@ const MySelectedClass = () => {
             }
         })
     }
+    
+      
 
     return (
-       <div className="w-full md:my-32">
+        <div className="w-full md:my-32">
             <div className="uppercase font-bold h-[70px] flex justify-evenly items-center mb-4 p-8">
                 <h3 className="text-3xl"> Total Items : {selects.length}</h3>
                 <h3 className="text-3xl"> Total Prices : ${totalPrice}</h3>
