@@ -1,4 +1,4 @@
-import { FaTrash } from "react-icons/fa";
+import { FaTrash, FaAmazonPay } from "react-icons/fa";
 import useSelected from "../../../Hooks/useSelected";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
@@ -45,7 +45,7 @@ const MySelectedClass = () => {
                 <h3 className="text-3xl"> Total Prices : ${totalPrice}</h3>
 
                 <Link to="/dashboard/payment">
-                    <button className="btn btn-warning btn-md">pay</button>
+                    <button className="btn btn-warning btn-md"><FaAmazonPay ></FaAmazonPay><span className="mr-2">Pay</span></button>
                 </Link>
 
             </div>

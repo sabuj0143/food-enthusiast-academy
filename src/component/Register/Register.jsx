@@ -51,7 +51,7 @@ const Register = () => {
                 updateUserProfile(name, photo)
                     .then(() => {
 
-                        const saveUser = { name: name, email: email };
+                        const saveUser = { name, email };
                         console.log(saveUser);
 
 

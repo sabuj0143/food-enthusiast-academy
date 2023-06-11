@@ -10,7 +10,6 @@ const TopSixStudents = () => {
         fetch('http://localhost:5000/classes')
             .then(res => res.json())
             .then(data => {
-                console.log(data);
                 const sortedStudents = data.sort((a, b) => b.students - a.students);
                 const topStudentsData = sortedStudents.slice(0, 6);
                 setTopStudents(topStudentsData);

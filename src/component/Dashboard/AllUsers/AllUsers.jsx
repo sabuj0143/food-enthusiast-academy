@@ -11,6 +11,7 @@ const AllUsers = () => {
         const res = await axiosSecure.get('/users')
         return res.data;
     })
+    
     console.log(users);
     const handleMakeAdmin = user => {
         fetch(`http://localhost:5000/users/admin/${user._id}`, {

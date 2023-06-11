@@ -1,4 +1,4 @@
-import { FaBook, FaCalendarAlt, FaHome, FaShoppingCart, FaUsers, FaUtensils, FaWallet } from "react-icons/fa";
+import { FaBook, FaHome, FaShoppingCart, FaRegCalendarCheck, FaUsers, FaUtensils, FaWallet } from "react-icons/fa";
 import { NavLink, Outlet } from "react-router-dom";
 import useAdmin from "../../Hooks/useAdmin";
 import useInstructor from "../../Hooks/useInstructor";
@@ -28,7 +28,7 @@ const Dashboard = () => {
                     {
                         isAdmin ? <>
                             <li><NavLink to="/dashboard/manageClass">
-                                <FaUtensils></FaUtensils> MANAGE CLASS
+                                <FaShoppingCart></FaShoppingCart> MANAGE CLASS
                             </NavLink></li>
                             <li><NavLink to="/dashboard/allUsers">
                                 <FaUsers></FaUsers> MANEGE USERS
@@ -45,16 +45,16 @@ const Dashboard = () => {
                                 <FaBook></FaBook> TOTAL ENROLLED STUDENTS
                             </NavLink></li>
                             <li><NavLink to="/dashboard/feedback">
-                                <FaUsers></FaUsers> FEEDBACK
+                                <FaRegCalendarCheck></FaRegCalendarCheck> FEEDBACK
                             </NavLink></li>
                         </> : <>
                             <li>
                                 <NavLink to="/dashboard/mySelectedClass">
-                                    <FaShoppingCart /> My Classes
+                                    <FaBook /> My Classes
                                 </NavLink>
                             </li>
                             <li><NavLink to="/dashboard/myEnrolledClass">
-                                <FaCalendarAlt></FaCalendarAlt> MY ENROLLED CLASS
+                                <FaShoppingCart></FaShoppingCart> MY ENROLLED CLASS
                             </NavLink></li>
 
                         </>
