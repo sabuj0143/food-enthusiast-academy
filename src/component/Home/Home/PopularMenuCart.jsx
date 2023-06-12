@@ -22,7 +22,7 @@ const PopularMenuCart = ({ item }) => {
                         Price: ${price}
                     </h2>
                     
-
+                    
                 </div>
             </div>
         </>

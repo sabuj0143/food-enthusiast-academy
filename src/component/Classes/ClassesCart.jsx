@@ -23,7 +23,6 @@ const ClassesCart = ({ item }) => {
 
 
     const handleSelectCart = (item) => {
-        console.log(item);
 
         if (user && (isAdmin || isInstructor)) {
             return;
