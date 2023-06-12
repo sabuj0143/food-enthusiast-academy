@@ -53,7 +53,7 @@ const Register = () => {
                         const saveUser = { name, email };
 
 
-                        fetch('http://localhost:5000/users', {
+                        fetch('https://assigment-12-food-enthusiast-academy-server.vercel.app/users', {
                             method: "POST",
                             headers: {
                                 "content-type": "application/json",

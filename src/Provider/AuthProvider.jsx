@@ -40,11 +40,10 @@ const AuthProvider = ({ children }) => {
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, currentUser => {
-            console.log(currentUser);
             setUser(currentUser)
             if (currentUser) {
                 // Jwt token send to the server
-                axios.post('http://localhost:5000/jwt', { email: currentUser.email })
+                axios.post('https://assigment-12-food-enthusiast-academy-server.vercel.app/jwt', { email: currentUser.email })
                     .then(data => {
                         // console.log(data.data.token);
                         localStorage.setItem('access-token', data.data.token);

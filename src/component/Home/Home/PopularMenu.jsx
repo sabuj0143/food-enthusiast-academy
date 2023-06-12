@@ -7,7 +7,7 @@ const PopularMenu = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/classes')
+        fetch('https://assigment-12-food-enthusiast-academy-server.vercel.app/classes')
             .then(res => res.json())
             .then(data => {
                 setMenu(data);
@@ -20,7 +20,7 @@ const PopularMenu = () => {
     return (
         <div className="my-8 mt-12">
             <div className="my-4 mt-8 text-center">
-                <h3 className="text-4xl lilita font-semibold text-[#CD6001]">Top Six Popular Classes</h3>
+                <h3 className="text-4xl lilita font-semibold text-[#FBBD23]">Top Six Popular Classes</h3>
                 <hr className="w-[30%] mx-auto my-2" />
                 <hr className="w-[20%] mx-auto my-2" />
             </div>

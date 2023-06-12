@@ -7,7 +7,7 @@ const Instructors = () => {
 
     return (
         <div className="my-6">
-            <div className="grid md:grid-cols-3 gap-4">
+            <div className="grid bg-[#0F172A] md:grid-cols-3 gap-4">
                 {
                     classes.map(singleClass => <SingleClass
                         key={singleClass._id}

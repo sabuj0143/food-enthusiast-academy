@@ -2,22 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-.full-website{
-    background-color: white;
+.full-website {
+    background-color: #0F172A;
 }
 
-.oswald{
+#root {
+    background-color: #0F172A;
+}
+
+.oswald {
     font-family: 'Oswald', sans-serif;
 }
-.lora{
+
+.lora {
     font-family: 'Lora', serif;
 }
-.lilita{
+
+.lilita {
     font-family: 'Lilita One', cursive;
 }
-.montserrat{
+
+.montserrat {
     font-family: 'Montserrat', sans-serif;
 }
-.neue{
+
+.neue {
     font-family: 'Bebas Neue', sans-serif;
 }

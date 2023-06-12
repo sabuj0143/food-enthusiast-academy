@@ -19,7 +19,7 @@ const MySelectedClass = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/selects/${item._id}`, {
+                fetch(`https://assigment-12-food-enthusiast-academy-server.vercel.app/selects/${item._id}`, {
                     method: 'DELETE',
                 })
                     .then(res => res.json())
@@ -42,7 +42,7 @@ const MySelectedClass = () => {
 
     return (
         <div className="w-full md:my-32">
-            <div className="uppercase font-bold h-[70px] flex justify-evenly items-center mb-4 p-8">
+            <div className="uppercase font-bold h-[70px] flex justify-evenly mb-4 p-8">
                 <h3 className="text-3xl"> Total Items : {selects.length}</h3>
                 <h3 className="text-3xl"> Total Prices : ${totalPrice}</h3>
 
