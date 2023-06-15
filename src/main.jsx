@@ -31,6 +31,7 @@ import InstructorMyClass from './component/Dashboard/Instructor/InstructorMyClas
 import TotalEnrolled from './component/Dashboard/Instructor/TotalEnrolled';
 import Feedback from './component/Dashboard/Instructor/Feedback';
 import MyEnrolledClass from './component/Dashboard/Student/MyEnrolledClass';
+import ThemeProvider from './component/ThemeProvitaer/ThemeProvider';
 const queryClient = new QueryClient()
 
 
@@ -112,9 +113,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <div className='max-w-screen-xl	mx-auto'>
       <AuthProvider>
-        <QueryClientProvider QueryClientProvider client={queryClient} >
-          <RouterProvider router={router} />
-        </QueryClientProvider >
+        <ThemeProvider>
+          <QueryClientProvider QueryClientProvider client={queryClient} >
+            <RouterProvider router={router} />
+          </QueryClientProvider >
+        </ThemeProvider>
       </AuthProvider>
     </div>
   </React.StrictMode>,

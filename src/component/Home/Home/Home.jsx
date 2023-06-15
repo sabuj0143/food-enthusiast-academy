@@ -1,5 +1,5 @@
 import Banner from "./Banner";
-import CarouselSlider from "./CarouselSlider";
+// import CarouselSlider from "./CarouselSlider";
 import Contact from "./Contact";
 import Featured from "./Featured";
 import PopularMenu from "./PopularMenu";
@@ -9,7 +9,7 @@ const Home = () => {
     return (
         <div className="mt-4">
             <Banner></Banner>
-            <CarouselSlider></CarouselSlider>
+            {/* <CarouselSlider></CarouselSlider> */}
             <PopularMenu></PopularMenu>
             <TopSixStudents></TopSixStudents>
             <Contact></Contact>
